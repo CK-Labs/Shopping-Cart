@@ -120,10 +120,10 @@ const Products = (props) => {
   const photos = ["apple.png", "orange.png", "beans.png", "cabbage.png"];
 
   let list = items.map((item, index) => {
-    let n = index + 1049;
-    let uhit = "https://picsum.photos.com/random/800x800/?img=" + n;
-    
-    return (
+  let n = index + 1049;
+  let uhit = "https://picsum.photos.com/random/800x800/?img=" + n;
+  
+  return (
       <li key={index}>
         <Image src={uhit} width={70} roundedCircle></Image>
         <Button variant="primary" size="large">
@@ -176,8 +176,8 @@ const Products = (props) => {
   const restockProducts = (url) => {
     doFetch(url);
     let newItems = data.map((item) => {
-      let { name, country, cost, instock } = item;
-      return { name, country, cost, instock };
+    let { name, country, cost, instock } = item;
+    return { name, country, cost, instock };
     });
     setItems([...items, ...newItems]);
   };
